@@ -14,15 +14,15 @@
                         <button type="button" class="btn btn-outline-primary">search</button>
                     </div>
                 </ol>
-            </div><!-- end col -->       
-            
+            </div><!-- end col -->
+
         </div><!-- end row -->
     </div><!-- end container -->
 </div><!-- end page-title -->
 
 <section class="section">
     <div class="container">
-        <div class="row"> 
+        <div class="row">
             <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
                 <div class="sidebar">
                     <div class="widget">
@@ -39,7 +39,7 @@
                     </div><!-- end widget -->
                 </div>
             </div>
-            
+
             <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
                 <div class="page-wrapper">
                     <div class="blog-grid-system">
@@ -49,7 +49,7 @@
                                     <div class="blog-box">
                                         <div class="post-media">
                                             <a href="{{ route('web.post', $post->slug) }}" title="">
-                                                <img src="{{ $post->imageUrl() }}" alt="" class="img-fluid" > 
+                                                <img src="{{ $post->imageUrl() }}" alt="" class="img-fluid" >
                                                 <div class="hovereffect">
                                                     <span></span>
                                                 </div>
@@ -78,9 +78,11 @@
                         {!! $posts->links() !!}
                     </div><!-- end col -->
                 </div><!-- end row -->
-                
+
             </div><!-- end col -->
         </div><!-- end row -->
     </div><!-- end container -->
 </section>
 @endsection
+
+

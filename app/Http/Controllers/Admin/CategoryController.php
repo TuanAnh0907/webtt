@@ -1,12 +1,11 @@
 <?php
-
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use \App\Models\Category;
-
 use Illuminate\Support\Str;
+
+use \App\Models\Category;
 
 class CategoryController extends Controller
 {
@@ -66,6 +65,7 @@ class CategoryController extends Controller
 
         $checkSlug = Category::where('slug', $slug)->first();
 
+
         while($checkSlug) {
             $slug = $checkSlug->slug . "-" .Str::random(2);
         }
@@ -80,7 +80,7 @@ class CategoryController extends Controller
     }
 
     public function delete($id){
-        
+
         Category::where('id', $id)->delete();
         return Redirect()->route('admin.category.index');
 

@@ -46,7 +46,7 @@ class AuthController extends Controller
         ]);
 
         $user = Auth::user();
-        $date = [
+        $name = [
             'name' => $request->name
         ];
 
@@ -58,7 +58,7 @@ class AuthController extends Controller
             $data['password'] = bcrypt($request->password);
         }
 
-        $user->update($date); 
+        $user->DB::update($name); 
 
         return redirect()->route('admin.profile.index')->with('success', 'Updated successfully');
     }

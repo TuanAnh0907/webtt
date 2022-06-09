@@ -28,5 +28,5 @@ class AdminLoginMiddleware
         return redirect()->route('admin.auth.login')->with('error','Permission denied');
     }
 
-    
+
 }
